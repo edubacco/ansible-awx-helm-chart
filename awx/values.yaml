@@ -47,11 +47,14 @@ ingress:
 
 # Chart values https://github.com/helm/charts/blob/master/stable/memcached/values.yaml
 memcached:
-  install: true
+  install: false
+global:
+  subchart1:
+    enabled: false
 
 # Chart values https://github.com/helm/charts/blob/master/stable/rabbitmq/values.yaml
 rabbitmq:
-  install: true
+  install: false
   rabbitmq:
     username: awx
     password: awx
@@ -72,7 +75,7 @@ rabbitmq:
 
 # Chart values https://github.com/helm/charts/blob/master/stable/postgresql/values.yaml
 postgresql:
-  install: true
+  install: false
   image:
     registry: docker.io
     repository: bitnami/postgresql
